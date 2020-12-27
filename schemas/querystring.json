@@ -1,0 +1,34 @@
+{
+  "title": "Querystring Schema",
+  "type": "object",
+  "properties": {
+    "bkg": {
+      "type": "string",
+      "enum": ["white", "black", "transparent"],
+      "default": "white"
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 300,
+      "maximum": 3000,
+      "default": 300
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 300,
+      "maximum": 3000,
+      "default": 300
+    },
+    "dpr": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "default": 2
+    },
+    "c": { 
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["c"]
+}

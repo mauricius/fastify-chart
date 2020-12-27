@@ -1,0 +1,28 @@
+{
+  "name": "fastify-chart",
+  "version": "0.1.0",
+  "description": "Fastify Chart module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauricius/fastify-chart.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "gcf": "functions-framework --target=helloWorld",
+    "start": "node server.js",
+    "test": "standard && node my-tests.js"
+  },
+  "author": "Maurizio Bonani",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^1.7.1",
+    "chart.js": "^2.9.4",
+    "chartjs-node-canvas": "^3.0.6",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.9.2",
+    "vm2": "^3.9.2"
+  },
+  "devDependencies": {
+    "standard": "*"
+  }
+}

@@ -1,0 +1,10 @@
+.env
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+*.log
+npm-debug.log*
+
+node_modules
