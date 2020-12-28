@@ -2,14 +2,11 @@
 
 require('dotenv').config()
 
-const app = require('fastify')({
-  logger: true,
-  pluginTimeout: 10000
+const server = require('./app')({
+  logger: true
 })
 
-app.register(require('./routes.js'))
-
-app.listen(process.env.PORT || 3000, (err) => {
+server.listen(process.env.PORT || 3000, (err, address) => {
   if (err) {
     app.log.error(err.message)
     process.exit(1)

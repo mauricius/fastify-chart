@@ -10,7 +10,7 @@
   "scripts": {
     "gcf": "functions-framework --target=helloWorld",
     "start": "node server.js",
-    "test": "standard && node my-tests.js"
+    "test": "standard && uvu -r esm tests"
   },
   "author": "Maurizio Bonani",
   "license": "ISC",
@@ -23,6 +23,8 @@
     "vm2": "^3.9.2"
   },
   "devDependencies": {
-    "standard": "*"
+    "esm": "^3.2.25",
+    "standard": "*",
+    "uvu": "^0.5.1"
   }
 }
