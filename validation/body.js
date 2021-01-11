@@ -15,7 +15,7 @@ module.exports = {
     },
     height: {
       type: 'integer',
-      minimum: 300,
+      minimum: 200,
       maximum: process.env.CHART_MAX_HEIGHT || 3000,
       default: 300
     },

@@ -1,7 +1,6 @@
 'use strict'
 
 const http = require('http')
-const Fastify = require('fastify')
 
 let handleRequest = null
 
@@ -11,12 +10,10 @@ const serverFactory = (handler, opts) => {
   return http.createServer()
 }
 
-const app = Fastify({
+const app = require('./app')({
   serverFactory,
-  logger: true
+  logger: process.env.NODE_ENV === 'development'
 })
-
-app.register(require('./routes.js'))
 
 exports.fastifyChart = (req, res) => {
   app.ready(err => {

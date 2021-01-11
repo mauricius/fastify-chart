@@ -8,7 +8,7 @@ const server = require('./app')({
 
 server.listen(process.env.PORT || 3000, (err, address) => {
   if (err) {
-    app.log.error(err.message)
+    server.log.error(err.message)
     process.exit(1)
   }
 })

@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "gcf": "functions-framework --target=helloWorld",
+    "gcf": " env NODE_ENV=production functions-framework --target=fastifyChart",
     "start": "node server.js",
     "test": "standard && uvu -r esm tests"
   },
