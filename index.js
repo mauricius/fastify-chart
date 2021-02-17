@@ -15,6 +15,10 @@ const app = require('./app')({
   logger: process.env.NODE_ENV === 'development'
 })
 
+app.addContentTypeParser('application/json', {}, (req, body, done) => {
+  done(null, body.body);
+});
+
 exports.fastifyChart = (req, res) => {
   app.ready(err => {
     if (err) throw err
